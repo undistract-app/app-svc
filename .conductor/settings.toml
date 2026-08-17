@@ -1,0 +1,21 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+[scripts]
+setup = "mise trust && mise install && mise exec -- corepack enable && cd frontend && mise exec -- corepack pnpm install"
+run_mode = "nonconcurrent"
+
+[scripts.run.all]
+command = '''mise exec -- corepack pnpm dlx concurrently -k -n FE,BE -c cyan,green "cd frontend && corepack pnpm run dev" "cd backend && SERVER_PORT=$CONDUCTOR_PORT ./gradlew bootRun"'''
+available_in = [ "local" ]
+default = true
+icon = "play"
+
+[scripts.run.frontend]
+command = "cd frontend && mise exec -- corepack pnpm run dev"
+available_in = [ "local" ]
+icon = "monitor"
+
+[scripts.run.backend]
+command = "cd backend && mise exec -- env SERVER_PORT=$CONDUCTOR_PORT ./gradlew bootRun"
+available_in = [ "local" ]
+icon = "server"

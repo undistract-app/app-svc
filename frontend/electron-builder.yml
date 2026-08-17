@@ -1,5 +1,5 @@
-appId: com.undistract.app
-productName: UnDistract
+appId: com.offdo.app
+productName: OffDo
 directories:
   buildResources: build
 files:

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-디톡스 투두 (Detox Todo) — 투두리스트 + 포모도로 + 앱 차단을 결합한 macOS 생산성 앱.
+OffDo — 투두리스트 + 포모도로 + 앱 차단을 결합한 macOS 생산성 앱.
 전체 기획 배경은 `docs/00. openspec.md` 참고.
 
 ## 라우팅 테이블
