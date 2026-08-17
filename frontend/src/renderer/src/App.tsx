@@ -20,7 +20,7 @@ function App(): React.JSX.Element {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <h1 className="text-2xl font-bold">UnDistract</h1>
+      <h1 className="text-2xl font-bold">OffDo</h1>
       <HealthStatus />
       <Button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>테마 전환</Button>
     </div>
